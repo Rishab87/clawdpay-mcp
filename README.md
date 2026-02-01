@@ -1,26 +1,31 @@
-# ClawdPay
+# ClawdPay MCP
 
-## Payments for AI Agents
+Payments for AI Agents - An MCP server that enables Claude to make purchases using Privacy.com virtual cards.
 
-An MCP server that enables Claude to make purchases using Privacy.com virtual cards.
+[![npm version](https://badge.fury.io/js/clawdpay-mcp.svg)](https://www.npmjs.com/package/clawdpay-mcp)
 
-### Architecture
-
-- Playwright and Chrome for browser automation
-- Privacy.com API for virtual debit cards (Strict Implementation)
-- MCP tools for payment flow
-
-### Setup
+## Quick Start
 
 ```bash
-git clone https://github.com/Rishab87/clawdpay.git
-cd clawdpay
+npx clawdpay-mcp
+```
+
+Or install globally:
+```bash
+npm install -g clawdpay-mcp
+```
+
+## Manual Setup
+
+```bash
+git clone https://github.com/Rishab87/clawdpay-mcp.git
+cd clawdpay-mcp
 npm install
 npx playwright install chromium
 npm run build
 ```
 
-### Configuration
+## Configuration
 
 Create `.env` file:
 ```
@@ -29,7 +34,7 @@ PRIVACY_SANDBOX=true
 HEADLESS=true
 ```
 
-### Usage with Claude Desktop
+## Claude Desktop Setup
 
 Add to `claude_desktop_config.json`:
 
@@ -37,8 +42,8 @@ Add to `claude_desktop_config.json`:
 {
   "mcpServers": {
     "clawdpay": {
-      "command": "node",
-      "args": ["/absolute/path/to/clawdpay/dist/index.js"],
+      "command": "npx",
+      "args": ["clawdpay-mcp"],
       "env": {
         "PRIVACY_API_KEY": "your_key",
         "PRIVACY_SANDBOX": "true"
@@ -48,12 +53,12 @@ Add to `claude_desktop_config.json`:
 }
 ```
 
-### Tools
+## Tools
 
 - `create_virtual_card`: Create a single-use virtual card via Privacy.com
-- `secure_auto_fill`: Intelligently finds and fills payment fields on the current page using heuristics
+- `secure_auto_fill`: Intelligently finds and fills payment fields on the current page
 - `get_funding_sources`: List available funding accounts
 
-### License
+## License
 
 MIT
