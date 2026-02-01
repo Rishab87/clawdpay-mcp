@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Stripe-like Checkout</title>
+</head>
+
+<body>
+    <h1>Checkout $50.00</h1>
+    <form>
+        <div>
+            <label for="name">Name on Card</label>
+            <input type="text" id="name" />
+        </div>
+
+        <div>
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="0000 0000 0000 0000" autocomplete="cc-number" />
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <div>
+                <label for="exp-date">Expiration</label>
+                <input type="text" id="exp-date" placeholder="MM / YY" autocomplete="cc-exp" />
+            </div>
+            <div>
+                <label for="cvc">CVC</label>
+                <input type="text" id="cvc" placeholder="123" autocomplete="cc-csc" />
+            </div>
+        </div>
+
+        <button type="submit">Pay $50.00</button>
+    </form>
+</body>
+
+</html>
