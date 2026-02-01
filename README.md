@@ -13,7 +13,7 @@ An MCP server that enables Claude to make purchases using Privacy.com virtual ca
 ### Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/clawdpay.git
+git clone https://github.com/Rishab87/clawdpay.git
 cd clawdpay
 npm install
 npx playwright install chromium

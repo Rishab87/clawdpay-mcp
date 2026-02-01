@@ -1,5 +1,5 @@
 {
-  "name": "clawdpay",
+  "name": "clawdpay-mcp",
   "version": "1.0.0",
   "description": "Payments for AI Agents - MCP Server",
   "type": "module",

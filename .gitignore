@@ -1,3 +1,4 @@
 dist/
 .env
+.npmrc
 node_modules/
